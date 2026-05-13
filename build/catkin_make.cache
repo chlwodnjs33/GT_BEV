@@ -1,0 +1,2 @@
+bev_map:morai_msgs
+-DCATKIN_DEVEL_PREFIX=/home/jaewoni/mgeo_ws/devel -DCMAKE_INSTALL_PREFIX=/home/jaewoni/mgeo_ws/install -G Unix Makefiles
