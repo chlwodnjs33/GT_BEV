@@ -32,7 +32,7 @@ from cv_bridge import CvBridge
 # 설정
 # ══════════════════════════════════════════════════════════════════════════════
 
-_WS_ROOT  = os.path.expanduser("~/mgeo_ws")
+_WS_ROOT  = os.path.expanduser("~/GT_BEV")
 MAP_DIR   = os.path.join(_WS_ROOT, "R_KR_PG_KATRI")
 
 SIZE      = 320

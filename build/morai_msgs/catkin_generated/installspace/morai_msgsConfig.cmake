@@ -67,14 +67,14 @@ set(morai_msgs_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(morai_msgs_SOURCE_PREFIX /home/jaewoni/mgeo_ws/src/morai_msgs)
-  set(morai_msgs_DEVEL_PREFIX /home/jaewoni/mgeo_ws/devel)
+  set(morai_msgs_SOURCE_PREFIX /home/autonav/GT_BEV/src/morai_msgs)
+  set(morai_msgs_DEVEL_PREFIX /home/autonav/GT_BEV/devel)
   set(morai_msgs_INSTALL_PREFIX "")
   set(morai_msgs_PREFIX ${morai_msgs_DEVEL_PREFIX})
 else()
   set(morai_msgs_SOURCE_PREFIX "")
   set(morai_msgs_DEVEL_PREFIX "")
-  set(morai_msgs_INSTALL_PREFIX /home/jaewoni/mgeo_ws/install)
+  set(morai_msgs_INSTALL_PREFIX /home/autonav/GT_BEV/install)
   set(morai_msgs_PREFIX ${morai_msgs_INSTALL_PREFIX})
 endif()
 
@@ -156,7 +156,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/jaewoni/mgeo_ws/install/lib;/home/jaewoni/mgeo_ws/devel/lib;/home/jaewoni/lidar_paper_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/autonav/GT_BEV/install/lib;/home/autonav/GT_BEV/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
