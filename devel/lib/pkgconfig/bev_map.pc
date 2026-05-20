@@ -1,8 +1,0 @@
-prefix=C:/Users/autonav009/Desktop/GT_BEV/devel
-
-Name: bev_map
-Description: Description of bev_map
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

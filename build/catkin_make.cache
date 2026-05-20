@@ -1,2 +1,0 @@
-bev_map;expert;morai_msgs
--DCMAKE_POLICY_VERSION_MINIMUM=3.5 -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCATKIN_DEVEL_PREFIX=C:\Users\autonav009\Desktop\GT_BEV\devel -DCMAKE_INSTALL_PREFIX=C:\Users\autonav009\Desktop\GT_BEV\install -G NMake Makefiles
