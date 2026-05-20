@@ -232,24 +232,15 @@ struct Printer< ::morai_msgs::RadarDetection_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::RadarDetection_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "detection_id: ";
     Printer<uint16_t>::stream(s, indent + "  ", v.detection_id);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "position: ";
+    s << std::endl;
     Printer< ::geometry_msgs::Point_<ContainerAllocator> >::stream(s, indent + "  ", v.position);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "azimuth: ";
     Printer<float>::stream(s, indent + "  ", v.azimuth);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "rangerate: ";
     Printer<float>::stream(s, indent + "  ", v.rangerate);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "amplitude: ";
     Printer<float>::stream(s, indent + "  ", v.amplitude);
   }

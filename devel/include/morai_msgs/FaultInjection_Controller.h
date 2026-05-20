@@ -209,20 +209,12 @@ struct Printer< ::morai_msgs::FaultInjection_Controller_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::FaultInjection_Controller_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "unique_id: ";
     Printer<int32_t>::stream(s, indent + "  ", v.unique_id);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "fault_location: ";
     Printer<int32_t>::stream(s, indent + "  ", v.fault_location);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "fault_class: ";
     Printer<int32_t>::stream(s, indent + "  ", v.fault_class);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "fault_subclass: ";
     Printer<int32_t>::stream(s, indent + "  ", v.fault_subclass);
   }

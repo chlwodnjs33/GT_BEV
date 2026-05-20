@@ -189,9 +189,8 @@ struct Printer< ::morai_msgs::MoraiTLInfoSrvRequest_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::MoraiTLInfoSrvRequest_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "request: ";
+    s << std::endl;
     Printer< ::morai_msgs::MoraiTLIndex_<ContainerAllocator> >::stream(s, indent + "  ", v.request);
   }
 };

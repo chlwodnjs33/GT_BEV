@@ -209,20 +209,12 @@ struct Printer< ::morai_msgs::SyncModeInfo_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::SyncModeInfo_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "master_id: ";
     Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.master_id);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "status: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.status);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "frame: ";
     Printer<uint64_t>::stream(s, indent + "  ", v.frame);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "can_send_tick: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.can_send_tick);
   }

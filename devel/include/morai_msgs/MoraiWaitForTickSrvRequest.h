@@ -190,9 +190,8 @@ struct Printer< ::morai_msgs::MoraiWaitForTickSrvRequest_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::MoraiWaitForTickSrvRequest_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "request: ";
+    s << std::endl;
     Printer< ::morai_msgs::WaitForTick_<ContainerAllocator> >::stream(s, indent + "  ", v.request);
   }
 };

@@ -184,8 +184,6 @@ struct Printer< ::morai_msgs::MoraiSrvResponse_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::MoraiSrvResponse_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "result: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.result);
   }

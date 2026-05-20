@@ -226,20 +226,13 @@ struct Printer< ::morai_msgs::GetTrafficLightStatus_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::GetTrafficLightStatus_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "header: ";
+    s << std::endl;
     Printer< ::std_msgs::Header_<ContainerAllocator> >::stream(s, indent + "  ", v.header);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "trafficLightIndex: ";
     Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.trafficLightIndex);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "trafficLightType: ";
     Printer<int16_t>::stream(s, indent + "  ", v.trafficLightType);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "trafficLightStatus: ";
     Printer<int16_t>::stream(s, indent + "  ", v.trafficLightStatus);
   }

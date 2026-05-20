@@ -192,12 +192,8 @@ struct Printer< ::morai_msgs::SetTrafficLight_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::SetTrafficLight_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "trafficLightIndex: ";
     Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.trafficLightIndex);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "trafficLightStatus: ";
     Printer<int16_t>::stream(s, indent + "  ", v.trafficLightStatus);
   }

@@ -241,29 +241,19 @@ struct Printer< ::morai_msgs::FaultInjection_Sensor_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::FaultInjection_Sensor_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "unique_id: ";
     Printer<int32_t>::stream(s, indent + "  ", v.unique_id);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "sensor_id: ";
     Printer<int32_t>::stream(s, indent + "  ", v.sensor_id);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "fault_class: ";
     Printer<int32_t>::stream(s, indent + "  ", v.fault_class);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "fault_subclass: ";
     Printer<int32_t>::stream(s, indent + "  ", v.fault_subclass);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "local_position_offset: ";
+    s << std::endl;
     Printer< ::geometry_msgs::Vector3_<ContainerAllocator> >::stream(s, indent + "  ", v.local_position_offset);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "local_rotation_offset: ";
+    s << std::endl;
     Printer< ::geometry_msgs::Vector3_<ContainerAllocator> >::stream(s, indent + "  ", v.local_rotation_offset);
   }
 };

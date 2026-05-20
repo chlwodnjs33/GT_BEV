@@ -213,9 +213,8 @@ struct Printer< ::morai_msgs::FaultInjectionTireSrvResponse_<ContainerAllocator>
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::FaultInjectionTireSrvResponse_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "response: ";
+    s << std::endl;
     Printer< ::morai_msgs::FaultInjection_Response_<ContainerAllocator> >::stream(s, indent + "  ", v.response);
   }
 };

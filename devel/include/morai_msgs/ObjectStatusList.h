@@ -281,67 +281,39 @@ struct Printer< ::morai_msgs::ObjectStatusList_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::ObjectStatusList_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "header: ";
+    s << std::endl;
     Printer< ::std_msgs::Header_<ContainerAllocator> >::stream(s, indent + "  ", v.header);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "num_of_npcs: ";
     Printer<int32_t>::stream(s, indent + "  ", v.num_of_npcs);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "num_of_pedestrian: ";
     Printer<int32_t>::stream(s, indent + "  ", v.num_of_pedestrian);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "num_of_obstacle: ";
     Printer<int32_t>::stream(s, indent + "  ", v.num_of_obstacle);
-    if (true || !indent.empty())
-      s << std::endl;
-    s << indent << "npc_list: ";
-    if (v.npc_list.empty() || false)
-      s << "[";
+    s << indent << "npc_list[]" << std::endl;
     for (size_t i = 0; i < v.npc_list.size(); ++i)
     {
-      if (false && i > 0)
-        s << ", ";
-      else if (!false)
-        s << std::endl << indent << "  -";
-      Printer< ::morai_msgs::ObjectStatus_<ContainerAllocator> >::stream(s, false ? std::string() : indent + "    ", v.npc_list[i]);
-    }
-    if (v.npc_list.empty() || false)
-      s << "]";
-    if (true || !indent.empty())
+      s << indent << "  npc_list[" << i << "]: ";
       s << std::endl;
-    s << indent << "pedestrian_list: ";
-    if (v.pedestrian_list.empty() || false)
-      s << "[";
+      s << indent;
+      Printer< ::morai_msgs::ObjectStatus_<ContainerAllocator> >::stream(s, indent + "    ", v.npc_list[i]);
+    }
+    s << indent << "pedestrian_list[]" << std::endl;
     for (size_t i = 0; i < v.pedestrian_list.size(); ++i)
     {
-      if (false && i > 0)
-        s << ", ";
-      else if (!false)
-        s << std::endl << indent << "  -";
-      Printer< ::morai_msgs::ObjectStatus_<ContainerAllocator> >::stream(s, false ? std::string() : indent + "    ", v.pedestrian_list[i]);
-    }
-    if (v.pedestrian_list.empty() || false)
-      s << "]";
-    if (true || !indent.empty())
+      s << indent << "  pedestrian_list[" << i << "]: ";
       s << std::endl;
-    s << indent << "obstacle_list: ";
-    if (v.obstacle_list.empty() || false)
-      s << "[";
+      s << indent;
+      Printer< ::morai_msgs::ObjectStatus_<ContainerAllocator> >::stream(s, indent + "    ", v.pedestrian_list[i]);
+    }
+    s << indent << "obstacle_list[]" << std::endl;
     for (size_t i = 0; i < v.obstacle_list.size(); ++i)
     {
-      if (false && i > 0)
-        s << ", ";
-      else if (!false)
-        s << std::endl << indent << "  -";
-      Printer< ::morai_msgs::ObjectStatus_<ContainerAllocator> >::stream(s, false ? std::string() : indent + "    ", v.obstacle_list[i]);
+      s << indent << "  obstacle_list[" << i << "]: ";
+      s << std::endl;
+      s << indent;
+      Printer< ::morai_msgs::ObjectStatus_<ContainerAllocator> >::stream(s, indent + "    ", v.obstacle_list[i]);
     }
-    if (v.obstacle_list.empty() || false)
-      s << "]";
   }
 };
 

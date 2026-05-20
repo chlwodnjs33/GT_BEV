@@ -226,28 +226,16 @@ struct Printer< ::morai_msgs::MoraiSimProcHandle_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::MoraiSimProcHandle_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "sim_process_status: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.sim_process_status);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "replay_option: ";
     Printer<int16_t>::stream(s, indent + "  ", v.replay_option);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "rosbag_file_name: ";
     Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.rosbag_file_name);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "replay_target_option: ";
     Printer<int16_t>::stream(s, indent + "  ", v.replay_target_option);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "replay_speed: ";
     Printer<int32_t>::stream(s, indent + "  ", v.replay_speed);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "start_time: ";
     Printer<int32_t>::stream(s, indent + "  ", v.start_time);
   }

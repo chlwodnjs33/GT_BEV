@@ -272,164 +272,70 @@ struct Printer< ::morai_msgs::MultiEgoSetting_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::MultiEgoSetting_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "number_of_ego_vehicle: ";
     Printer<int32_t>::stream(s, indent + "  ", v.number_of_ego_vehicle);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "camera_index: ";
     Printer<int32_t>::stream(s, indent + "  ", v.camera_index);
-    if (true || !indent.empty())
-      s << std::endl;
-    s << indent << "ego_index: ";
-    if (v.ego_index.empty() || true)
-      s << "[";
+    s << indent << "ego_index[]" << std::endl;
     for (size_t i = 0; i < v.ego_index.size(); ++i)
     {
-      if (true && i > 0)
-        s << ", ";
-      else if (!true)
-        s << std::endl << indent << "  -";
-      Printer<int32_t>::stream(s, true ? std::string() : indent + "    ", v.ego_index[i]);
+      s << indent << "  ego_index[" << i << "]: ";
+      Printer<int32_t>::stream(s, indent + "  ", v.ego_index[i]);
     }
-    if (v.ego_index.empty() || true)
-      s << "]";
-    if (true || !indent.empty())
-      s << std::endl;
-    s << indent << "global_position_x: ";
-    if (v.global_position_x.empty() || true)
-      s << "[";
+    s << indent << "global_position_x[]" << std::endl;
     for (size_t i = 0; i < v.global_position_x.size(); ++i)
     {
-      if (true && i > 0)
-        s << ", ";
-      else if (!true)
-        s << std::endl << indent << "  -";
-      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.global_position_x[i]);
+      s << indent << "  global_position_x[" << i << "]: ";
+      Printer<double>::stream(s, indent + "  ", v.global_position_x[i]);
     }
-    if (v.global_position_x.empty() || true)
-      s << "]";
-    if (true || !indent.empty())
-      s << std::endl;
-    s << indent << "global_position_y: ";
-    if (v.global_position_y.empty() || true)
-      s << "[";
+    s << indent << "global_position_y[]" << std::endl;
     for (size_t i = 0; i < v.global_position_y.size(); ++i)
     {
-      if (true && i > 0)
-        s << ", ";
-      else if (!true)
-        s << std::endl << indent << "  -";
-      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.global_position_y[i]);
+      s << indent << "  global_position_y[" << i << "]: ";
+      Printer<double>::stream(s, indent + "  ", v.global_position_y[i]);
     }
-    if (v.global_position_y.empty() || true)
-      s << "]";
-    if (true || !indent.empty())
-      s << std::endl;
-    s << indent << "global_position_z: ";
-    if (v.global_position_z.empty() || true)
-      s << "[";
+    s << indent << "global_position_z[]" << std::endl;
     for (size_t i = 0; i < v.global_position_z.size(); ++i)
     {
-      if (true && i > 0)
-        s << ", ";
-      else if (!true)
-        s << std::endl << indent << "  -";
-      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.global_position_z[i]);
+      s << indent << "  global_position_z[" << i << "]: ";
+      Printer<double>::stream(s, indent + "  ", v.global_position_z[i]);
     }
-    if (v.global_position_z.empty() || true)
-      s << "]";
-    if (true || !indent.empty())
-      s << std::endl;
-    s << indent << "global_roll: ";
-    if (v.global_roll.empty() || true)
-      s << "[";
+    s << indent << "global_roll[]" << std::endl;
     for (size_t i = 0; i < v.global_roll.size(); ++i)
     {
-      if (true && i > 0)
-        s << ", ";
-      else if (!true)
-        s << std::endl << indent << "  -";
-      Printer<float>::stream(s, true ? std::string() : indent + "    ", v.global_roll[i]);
+      s << indent << "  global_roll[" << i << "]: ";
+      Printer<float>::stream(s, indent + "  ", v.global_roll[i]);
     }
-    if (v.global_roll.empty() || true)
-      s << "]";
-    if (true || !indent.empty())
-      s << std::endl;
-    s << indent << "global_pitch: ";
-    if (v.global_pitch.empty() || true)
-      s << "[";
+    s << indent << "global_pitch[]" << std::endl;
     for (size_t i = 0; i < v.global_pitch.size(); ++i)
     {
-      if (true && i > 0)
-        s << ", ";
-      else if (!true)
-        s << std::endl << indent << "  -";
-      Printer<float>::stream(s, true ? std::string() : indent + "    ", v.global_pitch[i]);
+      s << indent << "  global_pitch[" << i << "]: ";
+      Printer<float>::stream(s, indent + "  ", v.global_pitch[i]);
     }
-    if (v.global_pitch.empty() || true)
-      s << "]";
-    if (true || !indent.empty())
-      s << std::endl;
-    s << indent << "global_yaw: ";
-    if (v.global_yaw.empty() || true)
-      s << "[";
+    s << indent << "global_yaw[]" << std::endl;
     for (size_t i = 0; i < v.global_yaw.size(); ++i)
     {
-      if (true && i > 0)
-        s << ", ";
-      else if (!true)
-        s << std::endl << indent << "  -";
-      Printer<float>::stream(s, true ? std::string() : indent + "    ", v.global_yaw[i]);
+      s << indent << "  global_yaw[" << i << "]: ";
+      Printer<float>::stream(s, indent + "  ", v.global_yaw[i]);
     }
-    if (v.global_yaw.empty() || true)
-      s << "]";
-    if (true || !indent.empty())
-      s << std::endl;
-    s << indent << "velocity: ";
-    if (v.velocity.empty() || true)
-      s << "[";
+    s << indent << "velocity[]" << std::endl;
     for (size_t i = 0; i < v.velocity.size(); ++i)
     {
-      if (true && i > 0)
-        s << ", ";
-      else if (!true)
-        s << std::endl << indent << "  -";
-      Printer<float>::stream(s, true ? std::string() : indent + "    ", v.velocity[i]);
+      s << indent << "  velocity[" << i << "]: ";
+      Printer<float>::stream(s, indent + "  ", v.velocity[i]);
     }
-    if (v.velocity.empty() || true)
-      s << "]";
-    if (true || !indent.empty())
-      s << std::endl;
-    s << indent << "gear: ";
-    if (v.gear.empty() || true)
-      s << "[";
+    s << indent << "gear[]" << std::endl;
     for (size_t i = 0; i < v.gear.size(); ++i)
     {
-      if (true && i > 0)
-        s << ", ";
-      else if (!true)
-        s << std::endl << indent << "  -";
-      Printer<int8_t>::stream(s, true ? std::string() : indent + "    ", v.gear[i]);
+      s << indent << "  gear[" << i << "]: ";
+      Printer<int8_t>::stream(s, indent + "  ", v.gear[i]);
     }
-    if (v.gear.empty() || true)
-      s << "]";
-    if (true || !indent.empty())
-      s << std::endl;
-    s << indent << "ctrl_mode: ";
-    if (v.ctrl_mode.empty() || true)
-      s << "[";
+    s << indent << "ctrl_mode[]" << std::endl;
     for (size_t i = 0; i < v.ctrl_mode.size(); ++i)
     {
-      if (true && i > 0)
-        s << ", ";
-      else if (!true)
-        s << std::endl << indent << "  -";
-      Printer<int8_t>::stream(s, true ? std::string() : indent + "    ", v.ctrl_mode[i]);
+      s << indent << "  ctrl_mode[" << i << "]: ";
+      Printer<int8_t>::stream(s, indent + "  ", v.ctrl_mode[i]);
     }
-    if (v.ctrl_mode.empty() || true)
-      s << "]";
   }
 };
 

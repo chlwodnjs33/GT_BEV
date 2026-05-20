@@ -258,37 +258,25 @@ struct Printer< ::morai_msgs::ObjectStatus_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::ObjectStatus_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "unique_id: ";
     Printer<int32_t>::stream(s, indent + "  ", v.unique_id);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "type: ";
     Printer<int32_t>::stream(s, indent + "  ", v.type);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "name: ";
     Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.name);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "heading: ";
     Printer<double>::stream(s, indent + "  ", v.heading);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "velocity: ";
+    s << std::endl;
     Printer< ::geometry_msgs::Vector3_<ContainerAllocator> >::stream(s, indent + "  ", v.velocity);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "acceleration: ";
+    s << std::endl;
     Printer< ::geometry_msgs::Vector3_<ContainerAllocator> >::stream(s, indent + "  ", v.acceleration);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "size: ";
+    s << std::endl;
     Printer< ::geometry_msgs::Vector3_<ContainerAllocator> >::stream(s, indent + "  ", v.size);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "position: ";
+    s << std::endl;
     Printer< ::geometry_msgs::Vector3_<ContainerAllocator> >::stream(s, indent + "  ", v.position);
   }
 };

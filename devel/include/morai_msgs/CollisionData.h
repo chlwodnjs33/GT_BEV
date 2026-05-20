@@ -273,52 +273,31 @@ struct Printer< ::morai_msgs::CollisionData_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::CollisionData_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "header: ";
+    s << std::endl;
     Printer< ::std_msgs::Header_<ContainerAllocator> >::stream(s, indent + "  ", v.header);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "global_offset_x: ";
     Printer<double>::stream(s, indent + "  ", v.global_offset_x);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "global_offset_y: ";
     Printer<double>::stream(s, indent + "  ", v.global_offset_y);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "global_offset_z: ";
     Printer<double>::stream(s, indent + "  ", v.global_offset_z);
-    if (true || !indent.empty())
-      s << std::endl;
-    s << indent << "collision_object: ";
-    if (v.collision_object.empty() || false)
-      s << "[";
+    s << indent << "collision_object[]" << std::endl;
     for (size_t i = 0; i < v.collision_object.size(); ++i)
     {
-      if (false && i > 0)
-        s << ", ";
-      else if (!false)
-        s << std::endl << indent << "  -";
-      Printer< ::morai_msgs::ObjectStatus_<ContainerAllocator> >::stream(s, false ? std::string() : indent + "    ", v.collision_object[i]);
-    }
-    if (v.collision_object.empty() || false)
-      s << "]";
-    if (true || !indent.empty())
+      s << indent << "  collision_object[" << i << "]: ";
       s << std::endl;
-    s << indent << "collision_objecta: ";
-    if (v.collision_objecta.empty() || false)
-      s << "[";
+      s << indent;
+      Printer< ::morai_msgs::ObjectStatus_<ContainerAllocator> >::stream(s, indent + "    ", v.collision_object[i]);
+    }
+    s << indent << "collision_objecta[]" << std::endl;
     for (size_t i = 0; i < v.collision_objecta.size(); ++i)
     {
-      if (false && i > 0)
-        s << ", ";
-      else if (!false)
-        s << std::endl << indent << "  -";
-      Printer< ::morai_msgs::ObjectStatus_<ContainerAllocator> >::stream(s, false ? std::string() : indent + "    ", v.collision_objecta[i]);
+      s << indent << "  collision_objecta[" << i << "]: ";
+      s << std::endl;
+      s << indent;
+      Printer< ::morai_msgs::ObjectStatus_<ContainerAllocator> >::stream(s, indent + "    ", v.collision_objecta[i]);
     }
-    if (v.collision_objecta.empty() || false)
-      s << "]";
   }
 };
 

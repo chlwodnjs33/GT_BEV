@@ -192,25 +192,14 @@ struct Printer< ::morai_msgs::FaultStatusInfo_Overall_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::FaultStatusInfo_Overall_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "status: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.status);
-    if (true || !indent.empty())
-      s << std::endl;
-    s << indent << "fault_subclass: ";
-    if (v.fault_subclass.empty() || true)
-      s << "[";
+    s << indent << "fault_subclass[]" << std::endl;
     for (size_t i = 0; i < v.fault_subclass.size(); ++i)
     {
-      if (true && i > 0)
-        s << ", ";
-      else if (!true)
-        s << std::endl << indent << "  -";
-      Printer<int32_t>::stream(s, true ? std::string() : indent + "    ", v.fault_subclass[i]);
+      s << indent << "  fault_subclass[" << i << "]: ";
+      Printer<int32_t>::stream(s, indent + "  ", v.fault_subclass[i]);
     }
-    if (v.fault_subclass.empty() || true)
-      s << "]";
   }
 };
 

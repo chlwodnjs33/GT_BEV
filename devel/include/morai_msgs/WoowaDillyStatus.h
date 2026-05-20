@@ -209,25 +209,15 @@ struct Printer< ::morai_msgs::WoowaDillyStatus_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::WoowaDillyStatus_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "header: ";
+    s << std::endl;
     Printer< ::std_msgs::Header_<ContainerAllocator> >::stream(s, indent + "  ", v.header);
-    if (true || !indent.empty())
-      s << std::endl;
-    s << indent << "deliveryItem: ";
-    if (v.deliveryItem.empty() || true)
-      s << "[";
+    s << indent << "deliveryItem[]" << std::endl;
     for (size_t i = 0; i < v.deliveryItem.size(); ++i)
     {
-      if (true && i > 0)
-        s << ", ";
-      else if (!true)
-        s << std::endl << indent << "  -";
-      Printer<int32_t>::stream(s, true ? std::string() : indent + "    ", v.deliveryItem[i]);
+      s << indent << "  deliveryItem[" << i << "]: ";
+      Printer<int32_t>::stream(s, indent + "  ", v.deliveryItem[i]);
     }
-    if (v.deliveryItem.empty() || true)
-      s << "]";
   }
 };
 

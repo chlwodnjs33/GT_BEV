@@ -193,9 +193,8 @@ struct Printer< ::morai_msgs::FaultInjectionCtrlSrvRequest_<ContainerAllocator> 
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::FaultInjectionCtrlSrvRequest_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "request: ";
+    s << std::endl;
     Printer< ::morai_msgs::FaultInjection_Controller_<ContainerAllocator> >::stream(s, indent + "  ", v.request);
   }
 };

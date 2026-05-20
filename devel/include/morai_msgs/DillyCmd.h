@@ -192,12 +192,8 @@ struct Printer< ::morai_msgs::DillyCmd_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::DillyCmd_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "isPickup: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.isPickup);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "deliveryItemIndex: ";
     Printer<int32_t>::stream(s, indent + "  ", v.deliveryItemIndex);
   }

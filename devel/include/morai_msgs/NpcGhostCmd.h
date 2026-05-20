@@ -232,25 +232,17 @@ struct Printer< ::morai_msgs::NpcGhostCmd_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::NpcGhostCmd_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "header: ";
+    s << std::endl;
     Printer< ::std_msgs::Header_<ContainerAllocator> >::stream(s, indent + "  ", v.header);
-    if (true || !indent.empty())
-      s << std::endl;
-    s << indent << "npc_list: ";
-    if (v.npc_list.empty() || false)
-      s << "[";
+    s << indent << "npc_list[]" << std::endl;
     for (size_t i = 0; i < v.npc_list.size(); ++i)
     {
-      if (false && i > 0)
-        s << ", ";
-      else if (!false)
-        s << std::endl << indent << "  -";
-      Printer< ::morai_msgs::NpcGhostInfo_<ContainerAllocator> >::stream(s, false ? std::string() : indent + "    ", v.npc_list[i]);
+      s << indent << "  npc_list[" << i << "]: ";
+      s << std::endl;
+      s << indent;
+      Printer< ::morai_msgs::NpcGhostInfo_<ContainerAllocator> >::stream(s, indent + "    ", v.npc_list[i]);
     }
-    if (v.npc_list.empty() || false)
-      s << "]";
   }
 };
 

@@ -200,16 +200,10 @@ struct Printer< ::morai_msgs::SaveSensorData_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::SaveSensorData_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "is_custom_file_name: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.is_custom_file_name);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "custom_file_name: ";
     Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.custom_file_name);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "file_dir: ";
     Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.file_dir);
   }

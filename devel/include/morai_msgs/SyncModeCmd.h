@@ -200,16 +200,10 @@ struct Printer< ::morai_msgs::SyncModeCmd_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::SyncModeCmd_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "user_id: ";
     Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.user_id);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "start_sync_mode: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.start_sync_mode);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "time_step: ";
     Printer<uint32_t>::stream(s, indent + "  ", v.time_step);
   }

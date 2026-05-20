@@ -231,24 +231,15 @@ struct Printer< ::morai_msgs::VehicleSpec_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::VehicleSpec_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "size: ";
+    s << std::endl;
     Printer< ::geometry_msgs::Vector3_<ContainerAllocator> >::stream(s, indent + "  ", v.size);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "wheel_base: ";
     Printer<float>::stream(s, indent + "  ", v.wheel_base);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "max_steering: ";
     Printer<double>::stream(s, indent + "  ", v.max_steering);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "overhang: ";
     Printer<float>::stream(s, indent + "  ", v.overhang);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "rear_overhang: ";
     Printer<float>::stream(s, indent + "  ", v.rear_overhang);
   }

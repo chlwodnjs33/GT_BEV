@@ -252,40 +252,22 @@ struct Printer< ::morai_msgs::ERP42Info_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::ERP42Info_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "longlCmdType: ";
     Printer<int32_t>::stream(s, indent + "  ", v.longlCmdType);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "position_x: ";
     Printer<float>::stream(s, indent + "  ", v.position_x);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "position_y: ";
     Printer<float>::stream(s, indent + "  ", v.position_y);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "position_z: ";
     Printer<float>::stream(s, indent + "  ", v.position_z);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "roll: ";
     Printer<float>::stream(s, indent + "  ", v.roll);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "pitch: ";
     Printer<float>::stream(s, indent + "  ", v.pitch);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "yaw: ";
     Printer<float>::stream(s, indent + "  ", v.yaw);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "velocity: ";
     Printer<float>::stream(s, indent + "  ", v.velocity);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "steering: ";
     Printer<float>::stream(s, indent + "  ", v.steering);
   }

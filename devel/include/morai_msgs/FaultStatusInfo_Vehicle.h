@@ -218,33 +218,23 @@ struct Printer< ::morai_msgs::FaultStatusInfo_Vehicle_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::FaultStatusInfo_Vehicle_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "accel: ";
+    s << std::endl;
     Printer< ::morai_msgs::FaultStatusInfo_Overall_<ContainerAllocator> >::stream(s, indent + "  ", v.accel);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "brake: ";
+    s << std::endl;
     Printer< ::morai_msgs::FaultStatusInfo_Overall_<ContainerAllocator> >::stream(s, indent + "  ", v.brake);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "steer: ";
+    s << std::endl;
     Printer< ::morai_msgs::FaultStatusInfo_Overall_<ContainerAllocator> >::stream(s, indent + "  ", v.steer);
-    if (true || !indent.empty())
-      s << std::endl;
-    s << indent << "tires: ";
-    if (v.tires.empty() || false)
-      s << "[";
+    s << indent << "tires[]" << std::endl;
     for (size_t i = 0; i < v.tires.size(); ++i)
     {
-      if (false && i > 0)
-        s << ", ";
-      else if (!false)
-        s << std::endl << indent << "  -";
-      Printer< ::morai_msgs::FaultStatusInfo_Overall_<ContainerAllocator> >::stream(s, false ? std::string() : indent + "    ", v.tires[i]);
+      s << indent << "  tires[" << i << "]: ";
+      s << std::endl;
+      s << indent;
+      Printer< ::morai_msgs::FaultStatusInfo_Overall_<ContainerAllocator> >::stream(s, indent + "    ", v.tires[i]);
     }
-    if (v.tires.empty() || false)
-      s << "]";
   }
 };
 

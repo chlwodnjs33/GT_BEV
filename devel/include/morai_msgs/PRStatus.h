@@ -242,28 +242,17 @@ struct Printer< ::morai_msgs::PRStatus_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::PRStatus_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "header: ";
+    s << std::endl;
     Printer< ::std_msgs::Header_<ContainerAllocator> >::stream(s, indent + "  ", v.header);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "position_X: ";
     Printer<float>::stream(s, indent + "  ", v.position_X);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "position_Y: ";
     Printer<float>::stream(s, indent + "  ", v.position_Y);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "position_Z: ";
     Printer<float>::stream(s, indent + "  ", v.position_Z);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "heading: ";
     Printer<double>::stream(s, indent + "  ", v.heading);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "mountStatus: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.mountStatus);
   }

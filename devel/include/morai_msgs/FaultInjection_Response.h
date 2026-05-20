@@ -230,33 +230,21 @@ struct Printer< ::morai_msgs::FaultInjection_Response_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::FaultInjection_Response_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "result: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.result);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "unique_id: ";
     Printer<int32_t>::stream(s, indent + "  ", v.unique_id);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "vehicle: ";
+    s << std::endl;
     Printer< ::morai_msgs::FaultStatusInfo_Vehicle_<ContainerAllocator> >::stream(s, indent + "  ", v.vehicle);
-    if (true || !indent.empty())
-      s << std::endl;
-    s << indent << "sensors: ";
-    if (v.sensors.empty() || false)
-      s << "[";
+    s << indent << "sensors[]" << std::endl;
     for (size_t i = 0; i < v.sensors.size(); ++i)
     {
-      if (false && i > 0)
-        s << ", ";
-      else if (!false)
-        s << std::endl << indent << "  -";
-      Printer< ::morai_msgs::FaultStatusInfo_Sensor_<ContainerAllocator> >::stream(s, false ? std::string() : indent + "    ", v.sensors[i]);
+      s << indent << "  sensors[" << i << "]: ";
+      s << std::endl;
+      s << indent;
+      Printer< ::morai_msgs::FaultStatusInfo_Sensor_<ContainerAllocator> >::stream(s, indent + "    ", v.sensors[i]);
     }
-    if (v.sensors.empty() || false)
-      s << "]";
   }
 };
 

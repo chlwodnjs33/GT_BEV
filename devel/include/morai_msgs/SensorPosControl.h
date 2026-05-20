@@ -234,111 +234,48 @@ struct Printer< ::morai_msgs::SensorPosControl_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::SensorPosControl_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
-    s << indent << "sensor_index: ";
-    if (v.sensor_index.empty() || true)
-      s << "[";
+    s << indent << "sensor_index[]" << std::endl;
     for (size_t i = 0; i < v.sensor_index.size(); ++i)
     {
-      if (true && i > 0)
-        s << ", ";
-      else if (!true)
-        s << std::endl << indent << "  -";
-      Printer<int16_t>::stream(s, true ? std::string() : indent + "    ", v.sensor_index[i]);
+      s << indent << "  sensor_index[" << i << "]: ";
+      Printer<int16_t>::stream(s, indent + "  ", v.sensor_index[i]);
     }
-    if (v.sensor_index.empty() || true)
-      s << "]";
-    if (true || !indent.empty())
-      s << std::endl;
-    s << indent << "pose_x: ";
-    if (v.pose_x.empty() || true)
-      s << "[";
+    s << indent << "pose_x[]" << std::endl;
     for (size_t i = 0; i < v.pose_x.size(); ++i)
     {
-      if (true && i > 0)
-        s << ", ";
-      else if (!true)
-        s << std::endl << indent << "  -";
-      Printer<float>::stream(s, true ? std::string() : indent + "    ", v.pose_x[i]);
+      s << indent << "  pose_x[" << i << "]: ";
+      Printer<float>::stream(s, indent + "  ", v.pose_x[i]);
     }
-    if (v.pose_x.empty() || true)
-      s << "]";
-    if (true || !indent.empty())
-      s << std::endl;
-    s << indent << "pose_y: ";
-    if (v.pose_y.empty() || true)
-      s << "[";
+    s << indent << "pose_y[]" << std::endl;
     for (size_t i = 0; i < v.pose_y.size(); ++i)
     {
-      if (true && i > 0)
-        s << ", ";
-      else if (!true)
-        s << std::endl << indent << "  -";
-      Printer<float>::stream(s, true ? std::string() : indent + "    ", v.pose_y[i]);
+      s << indent << "  pose_y[" << i << "]: ";
+      Printer<float>::stream(s, indent + "  ", v.pose_y[i]);
     }
-    if (v.pose_y.empty() || true)
-      s << "]";
-    if (true || !indent.empty())
-      s << std::endl;
-    s << indent << "pose_z: ";
-    if (v.pose_z.empty() || true)
-      s << "[";
+    s << indent << "pose_z[]" << std::endl;
     for (size_t i = 0; i < v.pose_z.size(); ++i)
     {
-      if (true && i > 0)
-        s << ", ";
-      else if (!true)
-        s << std::endl << indent << "  -";
-      Printer<float>::stream(s, true ? std::string() : indent + "    ", v.pose_z[i]);
+      s << indent << "  pose_z[" << i << "]: ";
+      Printer<float>::stream(s, indent + "  ", v.pose_z[i]);
     }
-    if (v.pose_z.empty() || true)
-      s << "]";
-    if (true || !indent.empty())
-      s << std::endl;
-    s << indent << "roll: ";
-    if (v.roll.empty() || true)
-      s << "[";
+    s << indent << "roll[]" << std::endl;
     for (size_t i = 0; i < v.roll.size(); ++i)
     {
-      if (true && i > 0)
-        s << ", ";
-      else if (!true)
-        s << std::endl << indent << "  -";
-      Printer<float>::stream(s, true ? std::string() : indent + "    ", v.roll[i]);
+      s << indent << "  roll[" << i << "]: ";
+      Printer<float>::stream(s, indent + "  ", v.roll[i]);
     }
-    if (v.roll.empty() || true)
-      s << "]";
-    if (true || !indent.empty())
-      s << std::endl;
-    s << indent << "pitch: ";
-    if (v.pitch.empty() || true)
-      s << "[";
+    s << indent << "pitch[]" << std::endl;
     for (size_t i = 0; i < v.pitch.size(); ++i)
     {
-      if (true && i > 0)
-        s << ", ";
-      else if (!true)
-        s << std::endl << indent << "  -";
-      Printer<float>::stream(s, true ? std::string() : indent + "    ", v.pitch[i]);
+      s << indent << "  pitch[" << i << "]: ";
+      Printer<float>::stream(s, indent + "  ", v.pitch[i]);
     }
-    if (v.pitch.empty() || true)
-      s << "]";
-    if (true || !indent.empty())
-      s << std::endl;
-    s << indent << "yaw: ";
-    if (v.yaw.empty() || true)
-      s << "[";
+    s << indent << "yaw[]" << std::endl;
     for (size_t i = 0; i < v.yaw.size(); ++i)
     {
-      if (true && i > 0)
-        s << ", ";
-      else if (!true)
-        s << std::endl << indent << "  -";
-      Printer<float>::stream(s, true ? std::string() : indent + "    ", v.yaw[i]);
+      s << indent << "  yaw[" << i << "]: ";
+      Printer<float>::stream(s, indent + "  ", v.yaw[i]);
     }
-    if (v.yaw.empty() || true)
-      s << "]";
   }
 };
 

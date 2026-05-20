@@ -215,16 +215,11 @@ struct Printer< ::morai_msgs::SyncModeCtrlCmd_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::SyncModeCtrlCmd_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "frame: ";
     Printer<uint64_t>::stream(s, indent + "  ", v.frame);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "command: ";
+    s << std::endl;
     Printer< ::morai_msgs::CtrlCmd_<ContainerAllocator> >::stream(s, indent + "  ", v.command);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "sensor_capture: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.sensor_capture);
   }

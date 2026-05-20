@@ -225,20 +225,13 @@ struct Printer< ::morai_msgs::SVADC_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::SVADC_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "header: ";
+    s << std::endl;
     Printer< ::std_msgs::Header_<ContainerAllocator> >::stream(s, indent + "  ", v.header);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "collisionCount: ";
     Printer<int32_t>::stream(s, indent + "  ", v.collisionCount);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "signalViolationCount: ";
     Printer<int32_t>::stream(s, indent + "  ", v.signalViolationCount);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "speedLimitCount: ";
     Printer<int32_t>::stream(s, indent + "  ", v.speedLimitCount);
   }

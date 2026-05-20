@@ -343,68 +343,41 @@ struct Printer< ::morai_msgs::SkidSteer6wUGVStatus_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::SkidSteer6wUGVStatus_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "header: ";
+    s << std::endl;
     Printer< ::std_msgs::Header_<ContainerAllocator> >::stream(s, indent + "  ", v.header);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "unique_id: ";
     Printer<int32_t>::stream(s, indent + "  ", v.unique_id);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "ctrl_mode: ";
     Printer<int32_t>::stream(s, indent + "  ", v.ctrl_mode);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "acceleration: ";
+    s << std::endl;
     Printer< ::geometry_msgs::Vector3_<ContainerAllocator> >::stream(s, indent + "  ", v.acceleration);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "position: ";
+    s << std::endl;
     Printer< ::geometry_msgs::Vector3_<ContainerAllocator> >::stream(s, indent + "  ", v.position);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "linear_velocity: ";
+    s << std::endl;
     Printer< ::geometry_msgs::Vector3_<ContainerAllocator> >::stream(s, indent + "  ", v.linear_velocity);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "angular_velocity: ";
+    s << std::endl;
     Printer< ::geometry_msgs::Vector3_<ContainerAllocator> >::stream(s, indent + "  ", v.angular_velocity);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "heading: ";
     Printer<double>::stream(s, indent + "  ", v.heading);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "cmd_type: ";
     Printer<int32_t>::stream(s, indent + "  ", v.cmd_type);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "left_front_wheel_rpm: ";
     Printer<double>::stream(s, indent + "  ", v.left_front_wheel_rpm);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "left_middle_wheel_rpm: ";
     Printer<double>::stream(s, indent + "  ", v.left_middle_wheel_rpm);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "left_rear_wheel_rpm: ";
     Printer<double>::stream(s, indent + "  ", v.left_rear_wheel_rpm);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "right_front_wheel_rpm: ";
     Printer<double>::stream(s, indent + "  ", v.right_front_wheel_rpm);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "right_middle_wheel_rpm: ";
     Printer<double>::stream(s, indent + "  ", v.right_middle_wheel_rpm);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "right_rear_wheel_rpm: ";
     Printer<double>::stream(s, indent + "  ", v.right_rear_wheel_rpm);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "lateral_offset: ";
     Printer<double>::stream(s, indent + "  ", v.lateral_offset);
   }

@@ -263,40 +263,23 @@ struct Printer< ::morai_msgs::MapSpec_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::MapSpec_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "plane_coordinate_system: ";
     Printer<int32_t>::stream(s, indent + "  ", v.plane_coordinate_system);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "utm_num: ";
     Printer<int32_t>::stream(s, indent + "  ", v.utm_num);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "utm_offset: ";
+    s << std::endl;
     Printer< ::geometry_msgs::Vector3_<ContainerAllocator> >::stream(s, indent + "  ", v.utm_offset);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "ellipse: ";
     Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.ellipse);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "central_latitude: ";
     Printer<double>::stream(s, indent + "  ", v.central_latitude);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "central_meridian: ";
     Printer<double>::stream(s, indent + "  ", v.central_meridian);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "scale_factor: ";
     Printer<double>::stream(s, indent + "  ", v.scale_factor);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "false_easting: ";
     Printer<double>::stream(s, indent + "  ", v.false_easting);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "false_northing: ";
     Printer<double>::stream(s, indent + "  ", v.false_northing);
   }

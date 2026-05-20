@@ -218,16 +218,11 @@ struct Printer< ::morai_msgs::Lamps_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::Lamps_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "header: ";
+    s << std::endl;
     Printer< ::std_msgs::Header_<ContainerAllocator> >::stream(s, indent + "  ", v.header);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "turnSignal: ";
     Printer<int8_t>::stream(s, indent + "  ", v.turnSignal);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "emergencySignal: ";
     Printer<int8_t>::stream(s, indent + "  ", v.emergencySignal);
   }

@@ -323,75 +323,43 @@ struct Printer< ::morai_msgs::ObjectStatusExtended_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::ObjectStatusExtended_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "unique_id: ";
     Printer<int32_t>::stream(s, indent + "  ", v.unique_id);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "type: ";
     Printer<int32_t>::stream(s, indent + "  ", v.type);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "name: ";
     Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.name);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "heading: ";
     Printer<double>::stream(s, indent + "  ", v.heading);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "velocity: ";
+    s << std::endl;
     Printer< ::geometry_msgs::Vector3_<ContainerAllocator> >::stream(s, indent + "  ", v.velocity);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "acceleration: ";
+    s << std::endl;
     Printer< ::geometry_msgs::Vector3_<ContainerAllocator> >::stream(s, indent + "  ", v.acceleration);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "size: ";
+    s << std::endl;
     Printer< ::geometry_msgs::Vector3_<ContainerAllocator> >::stream(s, indent + "  ", v.size);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "position: ";
+    s << std::endl;
     Printer< ::geometry_msgs::Vector3_<ContainerAllocator> >::stream(s, indent + "  ", v.position);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "orientation: ";
+    s << std::endl;
     Printer< ::geometry_msgs::Quaternion_<ContainerAllocator> >::stream(s, indent + "  ", v.orientation);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "turn_signal: ";
     Printer<int32_t>::stream(s, indent + "  ", v.turn_signal);
-    if (true || !indent.empty())
-      s << std::endl;
-    s << indent << "global_path_info: ";
-    if (v.global_path_info.empty() || true)
-      s << "[";
+    s << indent << "global_path_info[]" << std::endl;
     for (size_t i = 0; i < v.global_path_info.size(); ++i)
     {
-      if (true && i > 0)
-        s << ", ";
-      else if (!true)
-        s << std::endl << indent << "  -";
-      Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, true ? std::string() : indent + "    ", v.global_path_info[i]);
+      s << indent << "  global_path_info[" << i << "]: ";
+      Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.global_path_info[i]);
     }
-    if (v.global_path_info.empty() || true)
-      s << "]";
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "lane_departure: ";
     Printer<int32_t>::stream(s, indent + "  ", v.lane_departure);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "distance_left_lane: ";
     Printer<float>::stream(s, indent + "  ", v.distance_left_lane);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "distance_right_lane: ";
     Printer<float>::stream(s, indent + "  ", v.distance_right_lane);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "object_yaw_rate: ";
     Printer<float>::stream(s, indent + "  ", v.object_yaw_rate);
   }

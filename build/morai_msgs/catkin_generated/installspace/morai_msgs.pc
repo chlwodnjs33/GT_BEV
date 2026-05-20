@@ -1,4 +1,4 @@
-prefix=/home/jaewoni/mgeo_ws/install
+prefix=C:/Users/autonav009/Desktop/GT_BEV/install
 
 Name: morai_msgs
 Description: Description of morai_msgs

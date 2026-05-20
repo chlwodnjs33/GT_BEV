@@ -240,24 +240,15 @@ struct Printer< ::morai_msgs::EventInfo_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::EventInfo_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "option: ";
     Printer<int8_t>::stream(s, indent + "  ", v.option);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "ctrl_mode: ";
     Printer<int32_t>::stream(s, indent + "  ", v.ctrl_mode);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "gear: ";
     Printer<int32_t>::stream(s, indent + "  ", v.gear);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "lamps: ";
+    s << std::endl;
     Printer< ::morai_msgs::Lamps_<ContainerAllocator> >::stream(s, indent + "  ", v.lamps);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "set_pause: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.set_pause);
   }

@@ -1,5 +1,5 @@
 # generated from catkin/cmake/template/order_packages.context.py.in
-source_root_dir = '/home/jaewoni/mgeo_ws/src'
+source_root_dir = 'C:/Users/autonav009/Desktop/GT_BEV/src'
 whitelisted_packages = ''.split(';') if '' != '' else []
 blacklisted_packages = ''.split(';') if '' != '' else []
-underlay_workspaces = '/home/jaewoni/mgeo_ws/devel;/home/jaewoni/lidar_paper_ws/devel;/opt/ros/noetic'.split(';') if '/home/jaewoni/mgeo_ws/devel;/home/jaewoni/lidar_paper_ws/devel;/opt/ros/noetic' != '' else []
+underlay_workspaces = 'C:/Users/autonav009/Desktop/GT_BEV/devel;C:/Users/autonav009/anaconda3/envs/ros_env/Library'.split(';') if 'C:/Users/autonav009/Desktop/GT_BEV/devel;C:/Users/autonav009/anaconda3/envs/ros_env/Library' != '' else []

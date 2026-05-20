@@ -192,12 +192,8 @@ struct Printer< ::morai_msgs::SyncModeRemoveObject_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::SyncModeRemoveObject_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "unique_id: ";
     Printer<int32_t>::stream(s, indent + "  ", v.unique_id);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "frame: ";
     Printer<uint64_t>::stream(s, indent + "  ", v.frame);
   }

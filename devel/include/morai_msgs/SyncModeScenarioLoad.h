@@ -249,40 +249,22 @@ struct Printer< ::morai_msgs::SyncModeScenarioLoad_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::SyncModeScenarioLoad_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "frame: ";
     Printer<uint64_t>::stream(s, indent + "  ", v.frame);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "file_name: ";
     Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.file_name);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "load_network_connection_data: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.load_network_connection_data);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "delete_all: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.delete_all);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "load_ego_vehicle_data: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.load_ego_vehicle_data);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "load_surrounding_vehicle_data: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.load_surrounding_vehicle_data);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "load_pedestrian_data: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.load_pedestrian_data);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "load_obstacle_data: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.load_obstacle_data);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "set_pause: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.set_pause);
   }

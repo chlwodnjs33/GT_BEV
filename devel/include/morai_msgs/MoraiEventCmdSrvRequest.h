@@ -216,9 +216,8 @@ struct Printer< ::morai_msgs::MoraiEventCmdSrvRequest_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::MoraiEventCmdSrvRequest_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "request: ";
+    s << std::endl;
     Printer< ::morai_msgs::EventInfo_<ContainerAllocator> >::stream(s, indent + "  ", v.request);
   }
 };

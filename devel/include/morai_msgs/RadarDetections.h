@@ -234,25 +234,17 @@ struct Printer< ::morai_msgs::RadarDetections_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::RadarDetections_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "header: ";
+    s << std::endl;
     Printer< ::std_msgs::Header_<ContainerAllocator> >::stream(s, indent + "  ", v.header);
-    if (true || !indent.empty())
-      s << std::endl;
-    s << indent << "detections: ";
-    if (v.detections.empty() || false)
-      s << "[";
+    s << indent << "detections[]" << std::endl;
     for (size_t i = 0; i < v.detections.size(); ++i)
     {
-      if (false && i > 0)
-        s << ", ";
-      else if (!false)
-        s << std::endl << indent << "  -";
-      Printer< ::morai_msgs::RadarDetection_<ContainerAllocator> >::stream(s, false ? std::string() : indent + "    ", v.detections[i]);
+      s << indent << "  detections[" << i << "]: ";
+      s << std::endl;
+      s << indent;
+      Printer< ::morai_msgs::RadarDetection_<ContainerAllocator> >::stream(s, indent + "    ", v.detections[i]);
     }
-    if (v.detections.empty() || false)
-      s << "]";
   }
 };
 

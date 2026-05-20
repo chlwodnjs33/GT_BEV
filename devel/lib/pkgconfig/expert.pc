@@ -1,0 +1,8 @@
+prefix=C:/Users/autonav009/Desktop/GT_BEV/devel
+
+Name: expert
+Description: Description of expert
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

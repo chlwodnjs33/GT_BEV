@@ -235,24 +235,15 @@ struct Printer< ::morai_msgs::MoraiSimProcStatus_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::MoraiSimProcStatus_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "header: ";
+    s << std::endl;
     Printer< ::std_msgs::Header_<ContainerAllocator> >::stream(s, indent + "  ", v.header);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "latest_command_time: ";
     Printer<ros::Time>::stream(s, indent + "  ", v.latest_command_time);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "command_result: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.command_result);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "current_mode: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.current_mode);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "current_status: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.current_status);
   }

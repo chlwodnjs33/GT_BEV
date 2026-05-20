@@ -223,20 +223,14 @@ struct Printer< ::morai_msgs::GhostMessage_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::GhostMessage_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "position: ";
+    s << std::endl;
     Printer< ::geometry_msgs::Vector3_<ContainerAllocator> >::stream(s, indent + "  ", v.position);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "rotation: ";
+    s << std::endl;
     Printer< ::geometry_msgs::Vector3_<ContainerAllocator> >::stream(s, indent + "  ", v.rotation);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "velocity: ";
     Printer<double>::stream(s, indent + "  ", v.velocity);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "steering_angle: ";
     Printer<double>::stream(s, indent + "  ", v.steering_angle);
   }

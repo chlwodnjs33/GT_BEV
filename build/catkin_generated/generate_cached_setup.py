@@ -6,22 +6,22 @@ import stat
 import sys
 
 # find the import for catkin's python package - either from source space or from an installed underlay
-if os.path.exists(os.path.join('/opt/ros/noetic/share/catkin/cmake', 'catkinConfig.cmake.in')):
-    sys.path.insert(0, os.path.join('/opt/ros/noetic/share/catkin/cmake', '..', 'python'))
+if os.path.exists(os.path.join('C:/Users/autonav009/anaconda3/envs/ros_env/Library/share/catkin/cmake', 'catkinConfig.cmake.in')):
+    sys.path.insert(0, os.path.join('C:/Users/autonav009/anaconda3/envs/ros_env/Library/share/catkin/cmake', '..', 'python'))
 try:
     from catkin.environment_cache import generate_environment_script
 except ImportError:
     # search for catkin package in all workspaces and prepend to path
-    for workspace in '/home/jaewoni/mgeo_ws/devel;/home/jaewoni/lidar_paper_ws/devel;/opt/ros/noetic'.split(';'):
-        python_path = os.path.join(workspace, 'lib/python3/dist-packages')
+    for workspace in 'C:/Users/autonav009/Desktop/GT_BEV/devel;C:/Users/autonav009/anaconda3/envs/ros_env/Library'.split(';'):
+        python_path = os.path.join(workspace, 'lib/site-packages')
         if os.path.isdir(os.path.join(python_path, 'catkin')):
             sys.path.insert(0, python_path)
             break
     from catkin.environment_cache import generate_environment_script
 
-code = generate_environment_script('/home/jaewoni/mgeo_ws/devel/env.sh')
+code = generate_environment_script('C:/Users/autonav009/Desktop/GT_BEV/devel/env.bat')
 
-output_filename = '/home/jaewoni/mgeo_ws/build/catkin_generated/setup_cached.sh'
+output_filename = 'C:/Users/autonav009/Desktop/GT_BEV/build/catkin_generated/setup_cached.bat'
 with open(output_filename, 'w') as f:
     # print('Generate script for cached setup "%s"' % output_filename)
     f.write('\n'.join(code))

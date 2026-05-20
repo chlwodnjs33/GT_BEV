@@ -210,21 +210,14 @@ struct Printer< ::morai_msgs::VehicleCollision_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::VehicleCollision_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
-    s << indent << "crashed_vehicles: ";
-    if (v.crashed_vehicles.empty() || false)
-      s << "[";
+    s << indent << "crashed_vehicles[]" << std::endl;
     for (size_t i = 0; i < v.crashed_vehicles.size(); ++i)
     {
-      if (false && i > 0)
-        s << ", ";
-      else if (!false)
-        s << std::endl << indent << "  -";
-      Printer< ::morai_msgs::ObjectStatus_<ContainerAllocator> >::stream(s, false ? std::string() : indent + "    ", v.crashed_vehicles[i]);
+      s << indent << "  crashed_vehicles[" << i << "]: ";
+      s << std::endl;
+      s << indent;
+      Printer< ::morai_msgs::ObjectStatus_<ContainerAllocator> >::stream(s, indent + "    ", v.crashed_vehicles[i]);
     }
-    if (v.crashed_vehicles.empty() || false)
-      s << "]";
   }
 };
 

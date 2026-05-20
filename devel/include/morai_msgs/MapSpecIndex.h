@@ -184,8 +184,6 @@ struct Printer< ::morai_msgs::MapSpecIndex_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::MapSpecIndex_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "load_map_data: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.load_map_data);
   }

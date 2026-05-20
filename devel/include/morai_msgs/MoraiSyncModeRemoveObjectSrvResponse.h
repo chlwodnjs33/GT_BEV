@@ -190,9 +190,8 @@ struct Printer< ::morai_msgs::MoraiSyncModeRemoveObjectSrvResponse_<ContainerAll
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::MoraiSyncModeRemoveObjectSrvResponse_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "response: ";
+    s << std::endl;
     Printer< ::morai_msgs::SyncModeResultResponse_<ContainerAllocator> >::stream(s, indent + "  ", v.response);
   }
 };

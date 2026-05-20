@@ -227,28 +227,16 @@ struct Printer< ::morai_msgs::CtrlCmd_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::CtrlCmd_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "longlCmdType: ";
     Printer<int32_t>::stream(s, indent + "  ", v.longlCmdType);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "accel: ";
     Printer<double>::stream(s, indent + "  ", v.accel);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "brake: ";
     Printer<double>::stream(s, indent + "  ", v.brake);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "steering: ";
     Printer<double>::stream(s, indent + "  ", v.steering);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "velocity: ";
     Printer<double>::stream(s, indent + "  ", v.velocity);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "acceleration: ";
     Printer<double>::stream(s, indent + "  ", v.acceleration);
   }

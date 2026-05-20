@@ -205,9 +205,8 @@ struct Printer< ::morai_msgs::MoraiSyncModeAddObjectSrvRequest_<ContainerAllocat
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::MoraiSyncModeAddObjectSrvRequest_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "request: ";
+    s << std::endl;
     Printer< ::morai_msgs::SyncModeAddObject_<ContainerAllocator> >::stream(s, indent + "  ", v.request);
   }
 };

@@ -199,13 +199,10 @@ struct Printer< ::morai_msgs::FaultStatusInfo_Sensor_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::FaultStatusInfo_Sensor_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "sensor_id: ";
     Printer<int32_t>::stream(s, indent + "  ", v.sensor_id);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "sensor: ";
+    s << std::endl;
     Printer< ::morai_msgs::FaultStatusInfo_Overall_<ContainerAllocator> >::stream(s, indent + "  ", v.sensor);
   }
 };

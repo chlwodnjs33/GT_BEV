@@ -189,9 +189,8 @@ struct Printer< ::morai_msgs::PREventSrvRequest_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::PREventSrvRequest_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "request: ";
+    s << std::endl;
     Printer< ::morai_msgs::PREvent_<ContainerAllocator> >::stream(s, indent + "  ", v.request);
   }
 };

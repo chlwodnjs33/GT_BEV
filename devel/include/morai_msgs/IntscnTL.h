@@ -226,55 +226,27 @@ struct Printer< ::morai_msgs::IntscnTL_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::IntscnTL_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "header: ";
+    s << std::endl;
     Printer< ::std_msgs::Header_<ContainerAllocator> >::stream(s, indent + "  ", v.header);
-    if (true || !indent.empty())
-      s << std::endl;
-    s << indent << "idx: ";
-    if (v.idx.empty() || true)
-      s << "[";
+    s << indent << "idx[]" << std::endl;
     for (size_t i = 0; i < v.idx.size(); ++i)
     {
-      if (true && i > 0)
-        s << ", ";
-      else if (!true)
-        s << std::endl << indent << "  -";
-      Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, true ? std::string() : indent + "    ", v.idx[i]);
+      s << indent << "  idx[" << i << "]: ";
+      Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.idx[i]);
     }
-    if (v.idx.empty() || true)
-      s << "]";
-    if (true || !indent.empty())
-      s << std::endl;
-    s << indent << "state: ";
-    if (v.state.empty() || true)
-      s << "[";
+    s << indent << "state[]" << std::endl;
     for (size_t i = 0; i < v.state.size(); ++i)
     {
-      if (true && i > 0)
-        s << ", ";
-      else if (!true)
-        s << std::endl << indent << "  -";
-      Printer<int32_t>::stream(s, true ? std::string() : indent + "    ", v.state[i]);
+      s << indent << "  state[" << i << "]: ";
+      Printer<int32_t>::stream(s, indent + "  ", v.state[i]);
     }
-    if (v.state.empty() || true)
-      s << "]";
-    if (true || !indent.empty())
-      s << std::endl;
-    s << indent << "delta_time: ";
-    if (v.delta_time.empty() || true)
-      s << "[";
+    s << indent << "delta_time[]" << std::endl;
     for (size_t i = 0; i < v.delta_time.size(); ++i)
     {
-      if (true && i > 0)
-        s << ", ";
-      else if (!true)
-        s << std::endl << indent << "  -";
-      Printer<float>::stream(s, true ? std::string() : indent + "    ", v.delta_time[i]);
+      s << indent << "  delta_time[" << i << "]: ";
+      Printer<float>::stream(s, indent + "  ", v.delta_time[i]);
     }
-    if (v.delta_time.empty() || true)
-      s << "]";
   }
 };
 

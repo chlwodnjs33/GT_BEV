@@ -251,32 +251,19 @@ struct Printer< ::morai_msgs::GPSMessage_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::GPSMessage_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "header: ";
+    s << std::endl;
     Printer< ::std_msgs::Header_<ContainerAllocator> >::stream(s, indent + "  ", v.header);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "latitude: ";
     Printer<double>::stream(s, indent + "  ", v.latitude);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "longitude: ";
     Printer<double>::stream(s, indent + "  ", v.longitude);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "altitude: ";
     Printer<double>::stream(s, indent + "  ", v.altitude);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "eastOffset: ";
     Printer<double>::stream(s, indent + "  ", v.eastOffset);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "northOffset: ";
     Printer<double>::stream(s, indent + "  ", v.northOffset);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "status: ";
     Printer<int16_t>::stream(s, indent + "  ", v.status);
   }

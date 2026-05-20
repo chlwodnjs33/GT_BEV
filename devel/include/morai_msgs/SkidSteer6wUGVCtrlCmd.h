@@ -284,56 +284,30 @@ struct Printer< ::morai_msgs::SkidSteer6wUGVCtrlCmd_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::SkidSteer6wUGVCtrlCmd_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "cmd_type: ";
     Printer<int32_t>::stream(s, indent + "  ", v.cmd_type);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "Forward_input: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.Forward_input);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "Backward_input: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.Backward_input);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "Left_Turn_input: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.Left_Turn_input);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "Right_Turn_input: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.Right_Turn_input);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "left_front_wheel_rpm: ";
     Printer<float>::stream(s, indent + "  ", v.left_front_wheel_rpm);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "left_middle_wheel_rpm: ";
     Printer<float>::stream(s, indent + "  ", v.left_middle_wheel_rpm);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "left_rear_wheel_rpm: ";
     Printer<float>::stream(s, indent + "  ", v.left_rear_wheel_rpm);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "right_front_wheel_rpm: ";
     Printer<float>::stream(s, indent + "  ", v.right_front_wheel_rpm);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "right_middle_wheel_rpm: ";
     Printer<float>::stream(s, indent + "  ", v.right_middle_wheel_rpm);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "right_rear_wheel_rpm: ";
     Printer<float>::stream(s, indent + "  ", v.right_rear_wheel_rpm);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "Target_linear_velocity: ";
     Printer<float>::stream(s, indent + "  ", v.Target_linear_velocity);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "Target_angular_velocity: ";
     Printer<float>::stream(s, indent + "  ", v.Target_angular_velocity);
   }

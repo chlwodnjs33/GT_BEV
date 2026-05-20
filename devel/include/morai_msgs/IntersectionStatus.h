@@ -225,20 +225,13 @@ struct Printer< ::morai_msgs::IntersectionStatus_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::IntersectionStatus_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "header: ";
+    s << std::endl;
     Printer< ::std_msgs::Header_<ContainerAllocator> >::stream(s, indent + "  ", v.header);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "intersection_index: ";
     Printer<int32_t>::stream(s, indent + "  ", v.intersection_index);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "intersection_status: ";
     Printer<int16_t>::stream(s, indent + "  ", v.intersection_status);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "intersection_status_time: ";
     Printer<float>::stream(s, indent + "  ", v.intersection_status_time);
   }

@@ -276,24 +276,15 @@ struct Printer< ::morai_msgs::WaitForTickResponse_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::morai_msgs::WaitForTickResponse_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "tick_status: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.tick_status);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "pause_status: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.pause_status);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "frame: ";
     Printer<uint64_t>::stream(s, indent + "  ", v.frame);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "vehicle_status: ";
+    s << std::endl;
     Printer< ::morai_msgs::EgoVehicleStatus_<ContainerAllocator> >::stream(s, indent + "  ", v.vehicle_status);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "time: ";
     Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.time);
   }
