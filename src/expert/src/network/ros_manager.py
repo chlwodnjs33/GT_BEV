@@ -9,6 +9,7 @@ from morai_msgs.msg import EgoVehicleStatus, ObjectStatusList, CtrlCmd, GetTraff
 from ..vehicle_state import VehicleState
 from ..obstacle.object_info import ObjectInfo
 from ..config.config import Config
+from ..localization.point import Point as PathPoint
 
 
 class RosManager:
@@ -32,12 +33,20 @@ class RosManager:
         self.is_status = False
         self.is_object_info = False
         self.is_traffic_light = False
+        self.has_scenario_route = False
+        self.waiting_route_logged = False
 
     def execute(self):
         print("start simulation")
         self._set_protocol()
         while not rospy.is_shutdown():
             if self.is_status and self.is_object_info:
+                if not self.has_scenario_route:
+                    if not self.waiting_route_logged:
+                        rospy.loginfo("[Expert] waiting for /scenario_route before publishing control")
+                        self.waiting_route_logged = True
+                    self._send_stop_control()
+                    continue
                 control_input, local_path = self.autonomous_driving.execute(
                     self.vehicle_state, self.object_info_list, self.traffic_light
                 )
@@ -49,6 +58,7 @@ class RosManager:
         self.global_path_pub = rospy.Publisher('/global_path', Path, queue_size=1)
         self.local_path_pub = rospy.Publisher('/local_path', Path, queue_size=1)
         self.ctrl_pub = rospy.Publisher('/ctrl_cmd', CtrlCmd, queue_size=1)
+        self.ctrl_pub_ego0 = rospy.Publisher('/ctrl_cmd_0', CtrlCmd, queue_size=1)
         self.traffic_light_pub = rospy.Publisher("/SetTrafficLight", SetTrafficLight, queue_size=1)
         self.odom_pub = rospy.Publisher('/odom', Odometry, queue_size=1)
 
@@ -56,9 +66,24 @@ class RosManager:
         rospy.Subscriber("/Ego_topic", EgoVehicleStatus, self.vehicle_status_callback)
         rospy.Subscriber("/Object_topic", ObjectStatusList, self.object_info_callback)
         rospy.Subscriber("/GetTrafficLightStatus", GetTrafficLightStatus, self.traffic_light_callback)
+        rospy.Subscriber("/scenario_route", Path, self.scenario_route_callback)
+
+    def _send_stop_control(self):
+        ctrl_msg = CtrlCmd()
+        ctrl_msg.longlCmdType = 2
+        ctrl_msg.accel = 0.0
+        ctrl_msg.brake = 1.0
+        ctrl_msg.steering = 0.0
+        ctrl_msg.velocity = 0.0
+        ctrl_msg.acceleration = 0.0
+        self.ctrl_pub.publish(ctrl_msg)
+        self.ctrl_pub_ego0.publish(ctrl_msg)
+        self.ros_rate.sleep()
 
     def _send_data(self, control_input, local_path):
-        self.ctrl_pub.publish(CtrlCmd(**control_input.__dict__))
+        ctrl_msg = CtrlCmd(**control_input.__dict__)
+        self.ctrl_pub.publish(ctrl_msg)
+        self.ctrl_pub_ego0.publish(ctrl_msg)
         self.local_path_pub.publish(self.convert_to_ros_path(local_path, 'map'))
         self.odom_pub.publish(self.convert_to_odometry(self.vehicle_state))
 
@@ -67,6 +92,19 @@ class RosManager:
             self.count = 0
         self.count += 1
         self.ros_rate.sleep()
+
+    def scenario_route_callback(self, data):
+        path = [
+            PathPoint(pose.pose.position.x, pose.pose.position.y)
+            for pose in data.poses
+        ]
+        if self.autonomous_driving.set_global_path(path):
+            self.global_path = self.convert_to_ros_path(path, 'map')
+            self.has_scenario_route = True
+            self.waiting_route_logged = False
+            rospy.loginfo("[Expert] scenario route updated: %d points", len(path))
+        else:
+            rospy.logwarn("[Expert] ignored scenario route with %d points", len(path))
 
     @staticmethod
     def convert_to_ros_path(path, frame_id):

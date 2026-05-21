@@ -14,6 +14,7 @@ import numpy as np
 class AutonomousDriving:
     def __init__(self):
         config = Config()
+        self.config = config
 
         if config["map"]["use_mgeo_path"]:
             mgeo_path = mgeo_dijkstra_path(config["map"]["name"])
@@ -39,6 +40,19 @@ class AutonomousDriving:
         )
         self.max_steering = config['common']['max_steering'] / 180.0 * np.pi
 
+    def set_global_path(self, path):
+        if len(path) < 2:
+            return False
+
+        self.path = path
+        self.path_manager = PathManager(
+            self.path,
+            self.config["map"]["is_closed_path"],
+            self.config["map"]["local_path_size"],
+        )
+        self.path_manager.set_velocity_profile(**self.config['planning']['velocity_profile'])
+        return True
+
     def execute(self, vehicle_state, dynamic_object_list, current_traffic_light):
         # 현재 위치 기반으로 local path과 planned velocity 추출
         local_path, planned_velocity = self.path_manager.get_local_path(vehicle_state)
@@ -60,4 +74,4 @@ class AutonomousDriving:
         self.pure_pursuit.vehicle_state = vehicle_state
         steering_cmd = self.pure_pursuit.calculate_steering_angle() / self.max_steering
 
-        return ControlInput(acc_cmd, steering_cmd), local_path
+        return ControlInput(acc_cmd, steering_cmd, target_velocity), local_path
